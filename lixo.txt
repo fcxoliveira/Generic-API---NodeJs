@@ -1,0 +1,36 @@
+
+app.get('/fato', (req, res) => {
+    const connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'root',
+        database: 'transito',
+        port: '3306'
+    })
+    const queryString = 'SELECT * FROM infracao where ano = 2018';
+    connection.query(queryString, (err, rows, fields) => {
+        console.log("Dale");
+        res.json(rows);
+    })
+    // res.end()
+})
+app.get('/users', (req, res) => {
+    var user1   = {primeiroNome: "Filipe", ultimoNome:"Oliveira"};
+    const user2 = {primeiroNome: "Auto", ultimoNome:"Fill"};
+    res.json(  [user1, user2] );
+    res.send("Nodemon");
+});
+
+// var corsOptions = {
+//     "origin": "*",
+//     "methods": "",
+//     "prefç": "",
+//     "": ""
+// }
+
+var func = function(){
+    var idMemoria = document.getElementById("memoria");
+    var idCore = document.getElementById("rede");
+    console.log(idMemoria.value);
+    console.log(idCore.value);
+    return false;
+};
