@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="referrer" content="no-referrer">
+         <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>App</title>
+    </head>
+    <body>        
+        <form id="form-salvar" role="form" action="/salvar" method="post">
+            <div class="col-lg-6 col-lg-offset-3 form-group">
+                <h3 class="text-center">Criador de Máquinas Virtuais</h3>
+                <div class="row form-group">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 form-group">
+                            <label for="memoria">Memória (MB)</label>
+                            <input type="number" id="memoria" name="memoria" class="form-control" min=4 max=2096 required>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 form-group">
+                            <label for="cpu">CPU</label>
+                            <input type="number" id="cpu" name="cpu" class="form-control" min=1 max=4 required>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 form-group">
+                            <label for="id">IP da Rede</label>
+                            <input type="text" id="id" name="id" class="form-control" maxlength = "13" required>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group">
+                            <label for="nome">Nome da Máquina</label>
+                            <input type="text" id="nome" name="nome" class="form-control" required>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group">
+                            <label for="clone">Nome do Clone</label>
+                            <input type="text" id="clone" name="clone" class="form-control" required>
+                        </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group text-right">
+                        <input type="submit" value="Salvar" class="btn btn-primary"></input>
+                    </div>
+                </div>
+            </div>            
+        </form>        
+    </body>
+    <script 
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        
+        ></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <!-- <script src="main.js"></script> -->
+</html>
